@@ -1,0 +1,26 @@
+.hero-section {
+    /* Pleine largeur même si parent = container */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+
+    /* Hauteur correcte avec navbar */
+    min-height: calc(100vh - 56px);
+    padding-top: 56px;
+
+    /* Background */
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url("/assets/img/second-profil.png");
+
+    background-size: cover;
+    /* Remplit tout l'écran */
+    background-position: center 25%;
+    /* Ajuste le cadrage */
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+}
