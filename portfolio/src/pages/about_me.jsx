@@ -1,10 +1,5 @@
 import "./about_me.css";
 
-const stats = [
-  { value: "3+", label: "Ans d'expérience" },
-  { value: "20+", label: "Projets réalisés" },
-  { value: "5+", label: "Technologies maîtrisées" },
-];
 
 const infos = [
   { label: "Nom",       value: "Thierry AMOUZOU" },
@@ -12,6 +7,7 @@ const infos = [
   { label: "Email",     value: "thierryamouzou@example.com" },
   { label: "Localisation", value: "Marseille-France" },
   { label: "Disponibilité", value: "Open à de nouvelles opportunités" },
+  { label: "Téléphone", value: "+33 7 60 19 98 06"},
 ];
 
 export default function About() {
@@ -46,15 +42,13 @@ export default function About() {
           </h2>
 
           <p className="about-bio">
-            Développeur Fullstack et Data Scientist, je combine analyse de données
-            et ingénierie web pour créer des solutions qui ont du sens. Mon approche
-            mêle rigueur technique et sensibilité UX pour livrer des produits à la
-            fois performants et agréables à utiliser.
+            Actuellement étudiant en Master of Science en Informatique à Epitech Marseille, avec une spécialisation en Intelligence Artificielle et Big Data, je développe mes compétences en développement logiciel, data et technologies modernes.
           </p>
           <p className="about-bio">
-            Curieux et autodidacte, j'explore en permanence de nouveaux outils et
-            méthodologies — qu'il s'agisse de machine learning, de visualisation
-            de données ou de nouvelles architectures front-end.
+            Passionné par l’innovation technologique, je m’intéresse particulièrement à la manière dont les données et l’intelligence artificielle peuvent créer des solutions concrètes et utiles. Mon objectif est de concevoir des produits technologiques performants qui répondent à des problématiques réelles. Je m’investis également dans plusieurs projets techniques qui me permettent de renforcer mes compétences en programmation et en conception d’applications.
+          </p>
+          <p className="about-bio">
+            Cette approche pratique me permet de consolider mes connaissances et d’explorer différents domaines de la tech.
           </p>
 
           {/* Infos perso */}

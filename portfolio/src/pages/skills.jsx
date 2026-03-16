@@ -2,28 +2,24 @@ import { useEffect, useRef } from "react";
 import "./skills.css";
 
 const technicalSkills = [
-  { name: "Python / Data Science", level: 60, },
-  // { name: "Machine Learning", level: 78, icon: "🤖" },
-  { name: "React / JavaScript", level: 60, },
-  { name: "HTML / CSS", level: 90, icon: "🎨" },
-  { name: "Next.Js", level: 40,},
+  { name: "Python /Java / Php", level: 60, },
+  { name: "Machine Learning", level: 20 },
+  { name: "React / Next.Js", level: 60, },
+  { name: "HTML / CSS / Javascript", level: 90, },
+  { name: "Symfony ", level: 40,},
   { name: "SQL / Bases de données", level: 75, },
 ];
 
 const toolSkills = [
-  // { name: "Pandas & NumPy", category: "Data" },
-  // { name: "Scikit-learn", category: "ML" },
-  // { name: "TensorFlow", category: "ML" },
-  // { name: "Matplotlib / Seaborn", category: "Viz" },
   { name: "Git / GitHub", category: "Dev" },
   { name: "Docker", category: "DevOps" },
-  { name: "Figma", category: "Design" },
+  { name: "SQL", category: "Base de données" },
   { name: "Power BI", category: "Viz" },
   { name: "Tailwind CSS", category: "Dev" },
   { name: "REST API", category: "Dev" },
 ];
 
-function SkillBar({ name, level, icon, index }) {
+function SkillBar({ name, level, icon,  index }) {
   const barRef = useRef(null);
 
   useEffect(() => {
