@@ -1,5 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
     background-color:rgb(20, 17, 17);
+}
+
+section[id] {
+    scroll-margin-top: 88px;
 }

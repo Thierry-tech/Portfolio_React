@@ -215,7 +215,7 @@ export default function Hobbies() {
   const [activeVideo, setActiveVideo] = useState(null);
 
   return (
-    <section className="hobbies-section">
+    <section id="hobbies" className="hobbies-section">
       {/* Label */}
       <div className="section-label">
         <span className="label-line" />

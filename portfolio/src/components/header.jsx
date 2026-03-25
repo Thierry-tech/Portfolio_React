@@ -3,13 +3,13 @@ import { Link, useLocation } from "react-router-dom";
 import "./header.css";
 
 const navLinks = [
-  { to: "/", label: "Accueil" },
-  { to: "/about", label: "À propos" },
-  { to: "/skills", label: "Compétences" },
-  { to: "/projects", label: "Projets" },
-  { to: "/formation", label: "Formation" },
-  { to: "/hobbies", label: "Centres d'intérêts" },
-  { to: "/contact", label: "Contact" },
+  { to: "/#home", label: "Accueil", hash: "#home" },
+  { to: "/#about", label: "À propos", hash: "#about" },
+  { to: "/#skills", label: "Compétences", hash: "#skills" },
+  { to: "/#projects", label: "Projets", hash: "#projects" },
+  { to: "/#formation", label: "Formation", hash: "#formation" },
+  { to: "/#hobbies", label: "Centres d'intérêts", hash: "#hobbies" },
+  { to: "/#contact", label: "Contact", hash: "#contact" },
 ];
 
 export default function Header() {
@@ -26,13 +26,25 @@ export default function Header() {
   // Ferme le menu mobile lors d'un changement de page
   useEffect(() => {
     setMenuOpen(false);
-  }, [location.pathname]);
+  }, [location.pathname, location.hash]);
+
+  const isActive = (hash) => {
+    if (location.pathname !== "/") {
+      return false;
+    }
+
+    if (!location.hash) {
+      return hash === "#home";
+    }
+
+    return location.hash === hash;
+  };
 
   return (
     <header className={`site-header ${scrolled ? "scrolled" : ""}`}>
       <div className="header-inner">
         {/* Logo */}
-        <Link to="/" className="logo">
+        <Link to="/#home" className="logo">
           <span className="logo-bracket">&lt;</span>
           Thierry<span className="logo-accent">Tech</span>
           <span className="logo-bracket">/&gt;</span>
@@ -40,11 +52,11 @@ export default function Header() {
 
         {/* Navigation desktop */}
         <nav className="desktop-nav">
-          {navLinks.map(({ to, label }) => (
+          {navLinks.map(({ to, label, hash }) => (
             <Link
               key={to}
               to={to}
-              className={`nav-item ${location.pathname === to ? "active" : ""}`}
+              className={`nav-item ${isActive(hash) ? "active" : ""}`}
             >
               {label}
               <span className="nav-underline" />
@@ -66,11 +78,11 @@ export default function Header() {
 
       {/* Menu mobile */}
       <nav className={`mobile-nav ${menuOpen ? "open" : ""}`}>
-        {navLinks.map(({ to, label }) => (
+        {navLinks.map(({ to, label, hash }) => (
           <Link
             key={to}
             to={to}
-            className={`mobile-nav-item ${location.pathname === to ? "active" : ""}`}
+            className={`mobile-nav-item ${isActive(hash) ? "active" : ""}`}
           >
             {label}
           </Link>

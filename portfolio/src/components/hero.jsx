@@ -23,7 +23,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="hero-section d-flex align-items-center justify-content-center text-center">
+    <section id="home" className="hero-section d-flex align-items-center justify-content-center text-center">
       <div className="container">
 
         <h1 className="display-4 fw-bold text-white">

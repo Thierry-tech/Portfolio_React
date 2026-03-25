@@ -1,30 +1,30 @@
 import { useState } from "react";
 import "./projects.css";
 
-const categories = ["Tous", "Data Science", "Fullstack", "Machine Learning"];
+const categories = ["Tous", "DevOps", "Fullstack",];
 
 const projects = [
   {
     id: 1,
-    title: "Dashboard Analytics",
-    category: "Data Science",
+    title: "Spotify",
+    category: "Fullstack",
     description:
-      "Tableau de bord interactif pour visualiser des KPIs métier en temps réel, construit avec React et Python (FastAPI).",
-    tags: ["React", "Python", "FastAPI", "Recharts"],
-    image: "/assets/img/project-1.jpg",
-    github: "https://github.com/Thierry-tech",
+      "Clone de l'application Spotify.",
+    tags: ["Symfony", "Next.js", "ShadCN UI"],
+    image: "/assets/img/spotify.png",
+    github: "https://github.com/Thierry-tech/Spotify-clone",
     demo: "#",
     featured: true,
   },
   {
     id: 2,
-    title: "Pr",
-    category: "Machine Learning",
+    title: "Popeye",
+    category: "DevOps",
     description:
-      "Modèle de machine learning prédit le départ des clients avec 87% de précision. Pipeline complet de la data au déploiement.",
-    tags: ["Python", "Scikit-learn", "Pandas", "Flask"],
-    image: "/assets/img/project-2.jpg",
-    github: "https://github.com/Thierry-tech",
+      "Projet de dockerisation d'une application de vote.",
+    tags: ["Python", "Docker", "Redis"],
+    image: "/assets/img/popeye.jpg",
+    github: "https://github.com/Thierry-tech/Popeye",
     demo: "#",
     featured: true,
   },
@@ -169,7 +169,7 @@ export default function Projects() {
       : projects.filter((p) => p.category === active);
 
   return (
-    <section className="projects-section">
+    <section id="projects" className="projects-section">
       {/* Label */}
       <div className="section-label">
         <span className="label-line" />

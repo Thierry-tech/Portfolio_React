@@ -39,8 +39,9 @@ export default function Contact() {
   };
 
   return (
-    <div className="row justify-content-center">
-      <div className="col-md-8 col-lg-6">
+    <section id="contact" className="py-5">
+      <div className="row justify-content-center">
+        <div className="col-md-8 col-lg-6">
         <h2 className="mb-4 text-white">Contact</h2>
 
         <form onSubmit={handleSubmit}>  {/* ← form avec onSubmit */}
@@ -115,7 +116,8 @@ export default function Contact() {
             {status === "loading" ? "Envoi en cours..." : "Envoyer"}
           </button>
         </form>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

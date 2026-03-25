@@ -62,7 +62,7 @@ function SkillBar({ name, level, icon,  index }) {
 
 export default function Skills() {
   return (
-    <section className="skills-section">
+    <section id="skills" className="skills-section">
       {/* Label */}
       <div className="section-label">
         <span className="label-line" />

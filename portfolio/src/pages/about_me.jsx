@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./about_me.css";
 
 
@@ -12,7 +13,7 @@ const infos = [
 
 export default function About() {
   return (
-    <section className="about-section">
+    <section id="about" className="about-section">
       {/* Section label */}
       <div className="section-label">
         <span className="label-line" />
@@ -71,7 +72,7 @@ export default function About() {
                 <line x1="12" y1="15" x2="12" y2="3"/>
               </svg>
             </a>
-            <a href="/contact" className="btn-outline-about">Me contacter</a>
+            <Link to="/contact" className="btn-outline-about">Me contacter</Link>
           </div>
         </div>
       </div>

@@ -20,8 +20,31 @@ const formations = [
     school: "ESG Aix",
     location: "Aix-En-Provence, France",
     description:
-      "Fondamentaux du développement logiciel, algorithmique, bases de données relationnelles et premiers projets web fullstack.",
-    tags: ["Gestion de projet", "Droit des sociétés", "RGPD",],
+      "Expertise sur la création d'entreprise, la transformation digitale, la gerstion de projet et la stratégie d'entreprise.",
+    tags: ["Gestion de projet", "Droit des sociétés", "RGPD"],
+    icon: "📚",
+    current: false,
+  },
+  {
+    id: 3,
+    period: "2019 — 2022",
+    degree: "Licence professionnelle en Entyrepreneuriat et Développement communautaire",
+    school: "INJS-- Lomé",
+    location: "Lomé, Togo",
+    description:"",
+    tags: ["Gestion de projet", "Marketing Opérationnel & Stratégique", "Communication",],
+    icon: "📚",
+    current: false,
+  },
+  {
+    id: 4,
+    period: "2018 — 2019",
+    degree: "Baccalaureat Scientifique",
+    school: "CPL Ste Fatima",
+    location: "Tsévié, Togo",
+    description:
+      "",
+    tags: ["Mathématiques", "Physique-Chimie", "Sciences de la Vie et de la Terre"],
     icon: "📚",
     current: false,
   },
@@ -29,7 +52,7 @@ const formations = [
 
 export default function Formation() {
   return (
-    <section className="formation-section">
+    <section id="formation" className="formation-section">
       {/* Label */}
       <div className="section-label">
         <span className="label-line" />
